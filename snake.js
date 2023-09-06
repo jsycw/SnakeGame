@@ -2,7 +2,7 @@ const canvas = document.getElementById("canvas");
 const canvasContext = canvas.getContext('2d');
 let gameStarted = false;
 let lastFrameTime = 0;
-const targetFPS = 10;
+const targetFPS = 5;
 
 class Snake {
     constructor(x, y, size) {
@@ -102,7 +102,7 @@ function clearCanvas() {
 }
 
 function gameLoop() {
-    setInterval(show, 1000 / 10); // 20 FPS
+    setInterval(show, 1000 / targetFPS);
 }
 
 function show() {
